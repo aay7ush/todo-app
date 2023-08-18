@@ -12,7 +12,7 @@ _Light Theme_
 
 ## Live Site
 
-Check out the live site [here](https://calculat0r-4pp.netlify.app/).
+Check out the live site [here](https://todo-app-with-dark-theme.netlify.app/).
 
 ## Features
 
@@ -25,7 +25,7 @@ Check out the live site [here](https://calculat0r-4pp.netlify.app/).
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/calculator.git`
+1. Clone the repository: `git clone https://github.com/your-username/todo-app.git`
 2. Navigate to the project directory: `cd calculator`
 3. Install the dependencies: `npm install`
 4. Start the development server: `npm run dev`
