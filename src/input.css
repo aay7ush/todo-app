@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .theme-dark {
+    --clr-bg-main: hsl(235, 21%, 11%);
+    --clr-bg-input: hsl(235, 24%, 19%);
+    --clr-bg-border: hsl(237, 14%, 26%);
+    --clr-text-primary: hsl(234, 39%, 85%);
+    --clr-text-secondary: hsl(233, 14%, 35%);
+    --clr-line-through: hsl(234, 11%, 52%);
+    --clr-accent: hsl(220, 98%, 61%);
+    --clr-gradient-1: hsl(192, 100%, 67%);
+    --clr-gradient-2: hsl(280, 87%, 65%);
+  }
+
+  .theme-light {
+    --clr-bg-main: hsl(0, 0%, 98%);
+    --clr-bg-input: #fff;
+    --clr-bg-border: hsl(236, 33%, 92%);
+    --clr-text-primary: hsl(235, 19%, 35%);
+    --clr-text-secondary: hsl(236, 9%, 61%);
+    --clr-line-through: hsl(236, 9%, 61%);
+    --clr-accent: hsl(220, 98%, 61%);
+    --clr-gradient-1: hsl(192, 100%, 67%);
+    --clr-gradient-2: hsl(280, 87%, 65%);
+  }
+
+  .unchecked {
+    @apply w-6 h-6 transition-all duration-300 border-2 rounded-full bg-clr-bg-input border-clr-bg-border;
+  }
+
+  .unchecked:hover {
+    border-image: linear-gradient(
+      to right,
+      var(--clr-gradient-1),
+      var(--clr-gradient-2)
+    );
+    border-image-slice: 1;
+  }
+
+  .checked {
+    @apply w-6 h-6 rounded-full bg-gradient-to-r from-clr-gradient-1 to-clr-gradient-2;
+  }
+
+  .checked img {
+    display: block;
+  }
+
+  li:hover .delete-btn {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .bg-dark {
+      content: url('../images/bg-desktop-dark.jpg');
+    }
+
+    .bg-light {
+      content: url('../images/bg-desktop-light.jpg');
+    }
+  }
+}

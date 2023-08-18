@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="text-[18px] bg-clr-bg-main text-clr-text-primary">
+    <main>
+      <div>
+        <img
+          class="absolute top-0 w-full h-[250px] bg-dark -z-10"
+          src="../images/bg-mobile-dark.jpg"
+          alt=""
+        />
+        <img
+          class="absolute top-0 hidden w-full h-[250px] bg-light -z-10"
+          src="../images/bg-mobile-light.jpg"
+          alt=""
+        />
+      </div>
+      <article class="w-[90%] max-w-lg mx-auto mt-20">
+        <div class="flex items-center justify-between mb-7">
+          <h1
+            class="text-4xl pt-3 font-bold tracking-[.7rem] text-white uppercase"
+          >
+            Todo
+          </h1>
+          <button id="theme-switcher">
+            <img id="icon-sun" src="../images/icon-sun.svg" alt="" />
+            <img
+              id="icon-moon"
+              class="hidden"
+              src="../images/icon-moon.svg"
+              alt=""
+            />
+          </button>
+        </div>
+        <form action="#">
+          <div
+            class="flex items-center gap-3 px-5 py-3 mb-5 rounded-md bg-clr-bg-input"
+          >
+            <button class="unchecked"></button>
+            <input
+              class="w-full text-base bg-transparent outline-none caret-clr-accent placeholder-clr-line-through"
+              type="text"
+              placeholder="Create a new todo..."
+            />
+          </div>
+        </form>
+        <div class="mb-5 text-base rounded-md todo-div bg-clr-bg-input">
+          <ul id="todo-list"></ul>
+          <div
+            class="flex items-center justify-between px-5 py-3 text-clr-text-secondary"
+          >
+            <p><span id="items-left">0</span> items left</p>
+            <div
+              class="justify-center hidden gap-5 font-bold rounded-md md:flex text-clr-text-secondary bg-clr-bg-input"
+            >
+              <button
+                class="transition duration-300 tab all text-clr-accent hover:text-clr-text-primary"
+              >
+                All
+              </button>
+              <button
+                class="transition duration-300 tab active hover:text-clr-text-primary"
+              >
+                Active
+              </button>
+              <button
+                class="transition duration-300 tab completed hover:text-clr-text-primary"
+              >
+                Completed
+              </button>
+            </div>
+            <button
+              id="clear-btn"
+              class="transition duration-300 hover:text-clr-text-primary"
+            >
+              Clear Completed
+            </button>
+          </div>
+        </div>
+        <div
+          class="flex justify-center gap-5 px-5 py-3 font-bold rounded-md md:hidden text-clr-text-secondary bg-clr-bg-input"
+        >
+          <button
+            class="transition duration-300 tab all text-clr-accent hover:text-clr-text-primary"
+          >
+            All
+          </button>
+          <button
+            class="transition duration-300 tab active hover:text-clr-text-primary"
+          >
+            Active
+          </button>
+          <button
+            class="transition duration-300 tab completed hover:text-clr-text-primary"
+          >
+            Completed
+          </button>
+        </div>
+        <p class="my-12 text-base text-center text-clr-text-secondary">
+          Drag and drop to reorder list
+        </p>
+      </article>
+    </main>
+  </body>
+</html>
