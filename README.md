@@ -10,9 +10,9 @@ _Dark Theme_
 ![Light Theme](screenshots/light-theme.png)
 _Light Theme_
 
-## Live Site
+## Live Demo
 
-Check out the live site [here](https://todo-app-with-dark-theme.netlify.app/).
+Check out the live demo [here](https://todo-app-with-dark-theme.netlify.app/).
 
 ## Features
 
